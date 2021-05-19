@@ -1,0 +1,3 @@
+rootProject.name = "RShrink"
+include ':app'
+include ':plugin'

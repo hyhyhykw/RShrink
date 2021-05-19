@@ -1,0 +1,29 @@
+apply plugin: 'groovy' //必须
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+repositories {
+    mavenCentral()
+    google()
+}
+dependencies {
+
+    implementation gradleApi() //必须
+    implementation localGroovy() //必须
+
+    implementation 'com.android.tools.build:gradle:4.2.1'
+    implementation 'com.android.tools.build:gradle-api:4.2.1'
+}
+
+
+
+apply plugin: 'com.github.dcendents.android-maven' // 添加这个
+group='com.github.hyhyhykw'	// 指定group，com.github.<用户名>
+
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
